@@ -1,0 +1,49 @@
+<ui:decorate 	template="layout/page.xhtml" 
+				xmlns="http://www.w3.org/1999/xhtml" 
+				xmlns:h="http://xmlns.jcp.org/jsf/html" 
+				xmlns:ui="http://xmlns.jcp.org/jsf/facelets" 
+				xmlns:p="http://primefaces.org/ui"
+				xmlns:of="http://omnifaces.org/functions">
+
+	<ui:define name="top">
+		<div align="left">
+			<ui:include src="/templates/layout/header.xhtml" />
+
+			<div class="ux-menubar">
+				<ui:include src="/templates/layout/horizontalMenu.xhtml" />
+			</div>
+		</div>
+	</ui:define>
+
+	<ui:define name="center">
+		<div class="ux-body" align="left">
+			<div class="ux-body-content">
+
+				<!-- Identificação do ambiente logado -->
+				<ui:fragment>
+					<div class="ux-identification">
+
+					</div>
+				</ui:fragment>
+
+				<div style="padding: 10px;">
+					<div class="ux-content-title"></div>
+					<p:messages id="msgs" autoUpdate="true" globalOnly="true" />
+
+					<ui:insert name="content" />
+				</div>
+				<div align="center">
+		            <p style="font-family: Verdana, Arial, sans-serif; font-size: 10px !important; ">Navegadores a serem utilizados:</p>
+		        </div>
+			</div>
+		</div>
+
+	</ui:define>
+
+	<ui:define name="bottom">
+		<div align="left">
+			<ui:include src="/templates/layout/footer.xhtml" rendered="#{empty hideFooter}" />
+		</div>
+	</ui:define>
+
+</ui:decorate>
