@@ -25,7 +25,7 @@ import lombok.ToString;
 @EqualsAndHashCode(of = "id")
 @ToString()
 public class Classificacao implements Serializable {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = -635040727719660480L;
 
 	@Id
 	@SequenceGenerator(name = "sq_classificacoes", sequenceName = "sq_classificacoes", allocationSize = 1)

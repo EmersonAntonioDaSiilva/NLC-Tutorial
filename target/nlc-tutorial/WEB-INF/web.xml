@@ -4,6 +4,16 @@
 	<display-name>NLC - Natural Language Classifier</display-name>
 
 	<servlet>
+        <servlet-name>javax.ws.rs.core.Application</servlet-name>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>javax.ws.rs.core.Application</servlet-name>
+        <url-pattern>/tutorial/*</url-pattern>
+    </servlet-mapping>
+
+
+	<servlet>
 		<servlet-name>Faces Servlet</servlet-name>
 		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
@@ -16,6 +26,11 @@
 	<session-config>
 		<session-timeout>30000</session-timeout>
 	</session-config>
+
+	<persistence-context-ref>
+	    <persistence-context-ref-name>question-ds</persistence-context-ref-name>
+	    <persistence-unit-name>question-ds</persistence-unit-name>
+	</persistence-context-ref>
 
 	<welcome-file-list>
 		<welcome-file>index.xhtml</welcome-file>
